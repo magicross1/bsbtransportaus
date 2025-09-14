@@ -1,14 +1,96 @@
 <script setup lang="ts">
+// Hero内容 - 直接使用英文内容
+const heroTitle = 'Professional Container Transport Services Across Australia'
+const heroDescription = 'BSB Transport Australia delivers reliable container transport solutions with specialized trailers, sideloaders, and professional logistics services. Safe, on-time, and professional delivery across Australia.'
+
 const { data: page } = await useAsyncData('index', () => queryCollection('content').first())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
 useSeoMeta({
-  title: page.value.seo?.title || page.value.title,
-  ogTitle: page.value.seo?.title || page.value.title,
-  description: page.value.seo?.description || page.value.description,
-  ogDescription: page.value.seo?.description || page.value.description
+  title: 'BSB Transport Australia | Professional Container Transport Services',
+  ogTitle: 'BSB Transport Australia | Professional Container Transport Services',
+  description: 'BSB Transport Australia delivers reliable container transport solutions with specialized trailers, sideloaders, and professional logistics services. Safe, on-time delivery across Australia.',
+  ogDescription: 'BSB Transport Australia delivers reliable container transport solutions with specialized trailers, sideloaders, and professional logistics services. Safe, on-time delivery across Australia.',
+  keywords: 'BSB Transport Australia, container transport australia, trailer transport, sideloader transport, container storage, freight transport, logistics australia, professional transport services',
+  ogImage: 'https://www.bsbtransport.com.au/images/index.png',
+  twitterCard: 'summary_large_image',
+  twitterImage: 'https://www.bsbtransport.com.au/images/index.png',
+  robots: 'index, follow',
+  author: 'BSB Transport Australia',
+  publisher: 'BSB Transport Australia'
+})
+
+// 添加结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'BSB Transport Australia',
+        legalName: 'BSB Transport Australia Pty Ltd',
+        url: 'https://www.bsbtransport.com.au',
+        logo: 'https://www.bsbtransport.com.au/logo.png',
+        description: 'Professional container transport services across Australia. Specialized in trailer, sideloader, and container transport with safe, reliable, and on-time delivery.',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '7 Hume Highway',
+          addressLocality: 'Warwick Farm',
+          addressRegion: 'NSW',
+          postalCode: '2170',
+          addressCountry: 'AU'
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+61-456-881-666',
+          contactType: 'customer service',
+          availableLanguage: ['English', 'Chinese']
+        },
+        sameAs: [
+          'https://www.facebook.com/bsbtransportaus',
+          'https://www.linkedin.com/company/bsb-transport-australia',
+          'https://www.instagram.com/bsbtransportaus'
+        ],
+        serviceArea: {
+          '@type': 'Country',
+          name: 'Australia'
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Container Transport Services',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Container Transport',
+                description: 'Professional container transport services with specialized equipment'
+              }
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Trailer Transport',
+                description: 'Specialized trailer transport services across Australia'
+              }
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Sideloader Transport',
+                description: 'Sideloader transport services for efficient container handling'
+              }
+            }
+          ]
+        }
+      })
+    }
+  ]
 })
 </script>
 
@@ -26,11 +108,13 @@ useSeoMeta({
     </div>
 
     <UPageHero
-      :description="page.description"
+      :description="heroDescription"
       :links="page.hero.links"
       :ui="{
-        container: 'md:pt-18 lg:pt-20',
-        title: 'max-w-3xl mx-auto'
+        container: 'md:pt-18 lg:pt-20 relative z-10',
+        title: 'max-w-3xl mx-auto text-white drop-shadow-lg',
+        description: 'text-white/90 drop-shadow-md',
+        links: 'gap-4'
       }"
     >
       <template #top>
@@ -38,10 +122,57 @@ useSeoMeta({
       </template>
 
       <template #title>
-        <MDC
-          :value="page.title"
-          unwrap="p"
-        />
+        <div class="relative animate-fade-in">
+          <!-- 文字背景遮罩 -->
+          <div class="absolute inset-0 bg-black/30 rounded-lg blur-sm -m-4"></div>
+          <div class="relative">
+            <MDC
+              :value="heroTitle"
+              unwrap="p"
+              class="text-white font-bold drop-shadow-lg"
+            />
+          </div>
+        </div>
+      </template>
+
+      <template #description>
+        <div class="relative animate-fade-in-delay">
+          <!-- 描述文字背景遮罩 -->
+          <div class="absolute inset-0 bg-black/20 rounded-lg blur-sm -m-2"></div>
+          <div class="relative">
+            <MDC
+              :value="heroDescription"
+              unwrap="p"
+              class="text-white/90 text-lg drop-shadow-md"
+            />
+          </div>
+        </div>
+      </template>
+
+      <template #links>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay-2">
+          <UButton
+            v-for="link in page.hero.links"
+            :key="link.label"
+            :to="link.to"
+            :color="link.color"
+            :variant="link.variant"
+            :size="link.size"
+            class="font-bold px-8 py-4 shadow-lg backdrop-blur-sm"
+            :class="{
+              'bg-orange-500 hover:bg-orange-600 text-white border-orange-500': link.color === 'primary',
+              'bg-white/20 hover:bg-white/30 text-white border-white/50 backdrop-blur-sm': link.variant === 'outline'
+            }"
+          >
+            <template v-if="link.trailing" #trailing>
+              <UIcon :name="link.icon || 'i-lucide-arrow-right'" class="w-5 h-5" />
+            </template>
+            <template v-if="!link.trailing && link.icon" #leading>
+              <UIcon :name="link.icon" class="w-5 h-5" />
+            </template>
+            {{ link.label }}
+          </UButton>
+        </div>
       </template>
     </UPageHero>
 
@@ -78,7 +209,6 @@ useSeoMeta({
     <UPageSection
       id="features"
       :description="page.features.description"
-      :features="page.features.features"
       :ui="{
         title: 'text-left @container relative flex',
         description: 'text-left'
@@ -100,6 +230,33 @@ useSeoMeta({
           />
         </div>
       </template>
+
+      <!-- 自定义2行3列布局 -->
+      <UContainer>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            v-for="(feature, index) in page.features.features"
+            :key="index"
+            class="group p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary/50 transition-all duration-300 hover:shadow-lg bg-white dark:bg-gray-900"
+          >
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div :class="feature.ui.leading">
+                  <UIcon :name="feature.icon" class="w-6 h-6 text-primary" />
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
+                  {{ feature.title }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  {{ feature.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </UContainer>
     </UPageSection>
 
     <USeparator :ui="{ border: 'border-primary/30' }" />
@@ -120,69 +277,135 @@ useSeoMeta({
         <MDC :value="page.steps.title" />
       </template>
 
-      <template #features>
-        <UPageCard
-          v-for="(step, index) in page.steps.items"
-          :key="index"
-          class="group"
-          :ui="{ container: 'p-4 sm:p-4', title: 'flex items-center gap-1' }"
-        >
-          <UColorModeImage
-            v-if="step.image"
-            :light="step.image?.light"
-            :dark="step.image?.dark"
-            :alt="step.title"
-            class="size-full"
-          />
-
-          <div class="flex flex-col gap-2">
-            <span class="text-lg font-semibold">
-              {{ step.title }}
-            </span>
-            <span class="text-sm text-muted">
-              {{ step.description }}
-            </span>
+      <!-- 时间线样式的流程 -->
+      <UContainer>
+        <div class="relative">
+          <!-- 时间线连接线 -->
+          <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 transform -translate-y-1/2"></div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              v-for="(step, index) in page.steps.items"
+              :key="index"
+              class="relative group"
+            >
+              <!-- 步骤编号圆圈 -->
+              <div class="flex flex-col items-center text-center">
+                <div class="relative z-10 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {{ index + 1 }}
+                </div>
+                
+                <!-- 步骤图标 -->
+                <div class="mb-4">
+                  <UIcon :name="step.icon" class="w-8 h-8 text-primary" />
+                </div>
+                
+                <!-- 步骤内容 -->
+                <div class="space-y-2">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
+                    {{ step.title }}
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    {{ step.description }}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </UPageCard>
-      </template>
+        </div>
+      </UContainer>
     </UPageSection>
 
+    <!-- 服务对比区域 - 合并图片和对比卡片 -->
     <UPageSection
-      id="pricing"
-      class="mb-32 overflow-hidden"
-      :title="page.pricing.title"
-      :description="page.pricing.description"
-      :plans="page.pricing.plans"
-      :ui="{ title: 'text-left @container relative', description: 'text-left' }"
+      id="service-comparison"
+      class="mb-32"
+      title="Service Comparison"
+      description="Visual comparison of our two transport methods"
     >
-      <template #title>
-        <MDC :value="page.pricing.title" />
+      <UContainer>
+        <!-- 图片对比区域 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <!-- Standard/Drop Trailer Transport 图片区域 -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white text-center">
+              Standard / Drop Trailer Transport
+            </h3>
+            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/images/services/standard-trailer.png" 
+                alt="Standard Trailer Transport - Container stays on trailer"
+                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
+              />
+              <div class="p-4 bg-white dark:bg-gray-900">
+                <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+                  Container stays on trailer for cost-effective transport
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div class="hidden @min-[1120px]:block">
-          <UColorModeImage
-            light="/images/light/line-4.svg"
-            dark="/images/dark/line-4.svg"
-            class="absolute top-0 right-0 size-full transform translate-x-[60%]"
-          />
+          <!-- Sideloader Transport 图片区域 -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white text-center">
+              Sideloader Transport
+            </h3>
+            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/images/services/sideloader.png" 
+                alt="Sideloader Transport - Container drops to ground"
+                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
+              />
+              <div class="p-4 bg-white dark:bg-gray-900">
+                <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+                  Container drops to ground for flexible unloading
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </template>
 
-      <UPricingPlans scale>
-        <UPricingPlan
-          v-for="(plan, index) in page.pricing.plans"
-          :key="index"
-          :title="plan.title"
-          :description="plan.description"
-          :price="plan.price"
-          :billing-period="plan.billing_period"
-          :billing-cycle="plan.billing_cycle"
-          :highlight="plan.highlight"
-          :scale="plan.highlight"
-          variant="soft"
-          :features="plan.features"
-          :button="plan.button"
-        />
-      </UPricingPlans>
+        <!-- 服务对比卡片区域 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div
+            v-for="(plan, index) in page.pricing.plans"
+            :key="index"
+            class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-8 hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                {{ plan.title }}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 text-lg">
+                {{ plan.description }}
+              </p>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div
+                v-for="feature in plan.features"
+                :key="feature"
+                class="flex items-start gap-3"
+              >
+                <UIcon name="i-lucide-check" class="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
+                <span class="text-gray-700 dark:text-gray-300">{{ feature }}</span>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <UButton
+                :to="plan.button.to"
+                :color="plan.button.color"
+                :variant="plan.button.variant"
+                size="lg"
+                class="font-bold px-8 py-3"
+              >
+                {{ plan.button.label }}
+              </UButton>
+            </div>
+          </div>
+        </div>
+      </UContainer>
     </UPageSection>
 
     <UPageSection
@@ -203,29 +426,103 @@ useSeoMeta({
       </template>
 
       <UContainer>
-        <UPageColumns class="xl:columns-3">
-          <UPageCard
-            v-for="(testimonial, index) in page.testimonials.items"
-            :key="index"
-            variant="subtle"
-            :description="testimonial.quote"
-            :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
-          >
-            <template #footer>
-              <UUser
-                v-bind="testimonial.user"
-                size="xl"
-              />
-            </template>
-          </UPageCard>
-        </UPageColumns>
+        <!-- 滚动播放的评价卡片 -->
+        <div class="relative overflow-hidden">
+          <!-- 滚动容器 -->
+          <div class="flex animate-scroll gap-6 py-4" style="animation-duration: 30s;">
+            <!-- 第一组评价 -->
+            <div
+              v-for="(testimonial, index) in page.testimonials.items"
+              :key="`first-${index}`"
+              class="flex-shrink-0 w-80"
+            >
+              <div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                <!-- 评价内容 -->
+                <div class="mb-6">
+                  <div class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg relative">
+                    <UIcon name="i-lucide-quote" class="absolute -top-2 -left-2 w-8 h-8 text-orange-500/20" />
+                    <span class="pl-6">{{ testimonial.quote }}</span>
+                  </div>
+                </div>
+                
+                <!-- 用户信息 -->
+                <div class="flex items-center gap-4">
+                  <img
+                    :src="testimonial.user.avatar.src"
+                    :alt="testimonial.user.name"
+                    class="w-12 h-12 rounded-full object-cover ring-2 ring-orange-500/20"
+                  >
+                  <div class="flex-1">
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      {{ testimonial.user.name }}
+                    </div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">
+                      {{ testimonial.user.description }}
+                    </div>
+                    <!-- 行业标签 -->
+                    <div class="mt-1">
+                      <span class="inline-block px-2 py-1 text-xs font-medium bg-orange-500 text-white rounded-full">
+                        {{ (testimonial.user as any).industry || 'Transport & Logistics' }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 第二组评价（重复，用于无缝滚动） -->
+            <div
+              v-for="(testimonial, index) in page.testimonials.items"
+              :key="`second-${index}`"
+              class="flex-shrink-0 w-80"
+            >
+              <div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                <!-- 评价内容 -->
+                <div class="mb-6">
+                  <div class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg relative">
+                    <UIcon name="i-lucide-quote" class="absolute -top-2 -left-2 w-8 h-8 text-orange-500/20" />
+                    <span class="pl-6">{{ testimonial.quote }}</span>
+                  </div>
+                </div>
+                
+                <!-- 用户信息 -->
+                <div class="flex items-center gap-4">
+                  <img
+                    :src="testimonial.user.avatar.src"
+                    :alt="testimonial.user.name"
+                    class="w-12 h-12 rounded-full object-cover ring-2 ring-orange-500/20"
+                  >
+                  <div class="flex-1">
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      {{ testimonial.user.name }}
+                    </div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">
+                      {{ testimonial.user.description }}
+                    </div>
+                    <!-- 行业标签 -->
+                    <div class="mt-1">
+                      <span class="inline-block px-2 py-1 text-xs font-medium bg-orange-500 text-white rounded-full">
+                        {{ (testimonial.user as any).industry || 'Transport & Logistics' }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 渐变遮罩 -->
+          <div class="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10"></div>
+          <div class="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10"></div>
+        </div>
       </UContainer>
     </UPageSection>
 
     <USeparator />
 
     <UPageCTA
-      v-bind="page.cta"
+      :title="page.cta.title"
+      :description="(page.cta as any).subtitle || page.cta.description"
       variant="naked"
       class="overflow-hidden @container"
     >
@@ -246,7 +543,86 @@ useSeoMeta({
         </div>
       </template>
 
+      <!-- 本地化卖点 -->
+      <template #description>
+        <div class="text-center mb-8">
+          <div class="text-lg font-semibold text-primary mb-2">
+            {{ page.cta.description }}
+          </div>
+          <p class="text-gray-600 dark:text-gray-400">
+            {{ (page.cta as any).subtitle || page.cta.description }}
+          </p>
+        </div>
+      </template>
+
+      <!-- 双按钮布局 -->
+      <template #links>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <UButton
+            v-for="link in page.cta.links"
+            :key="link.label"
+            :to="link.to"
+            :color="link.color"
+            :variant="link.variant"
+            :size="link.size"
+            class="font-bold px-8 py-4"
+          >
+            <template v-if="(link as any).trailingIcon || link.trailing" #trailing>
+              <UIcon :name="(link as any).trailingIcon || link.icon" class="w-5 h-5" />
+            </template>
+            <template v-if="link.icon" #leading>
+              <UIcon :name="link.icon" class="w-5 h-5" />
+            </template>
+            {{ link.label }}
+          </UButton>
+        </div>
+      </template>
+
       <LazyStarsBg />
     </UPageCTA>
   </div>
 </template>
+
+<style scoped>
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeIn 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+</style>

@@ -1,36 +1,55 @@
 <script setup lang="ts">
 const columns = [{
-  label: 'Resources',
+  label: 'Services',
   children: [{
-    label: 'Help center'
+    label: 'Standard Trailer Transport',
+    to: '/services/standard-trailer'
   }, {
-    label: 'Docs'
+    label: 'Drop Trailer Transport',
+    to: '/services/drop-trailer'
   }, {
-    label: 'Roadmap'
+    label: 'Sideloader Transport',
+    to: '/services/sideloader'
   }, {
-    label: 'Changelog'
-  }]
-}, {
-  label: 'Features',
-  children: [{
-    label: 'Affiliates'
+    label: 'Container Storage',
+    to: '/services/container-storage'
   }, {
-    label: 'Portal'
+    label: 'Logistics Automation',
+    to: '/services/logistics-automation'
   }, {
-    label: 'Jobs'
-  }, {
-    label: 'Sponsors'
+    label: 'Smart Quote Calculator',
+    to: '/services/quote-calculator'
   }]
 }, {
   label: 'Company',
   children: [{
-    label: 'About'
+    label: 'About Us',
+    to: '/about'
   }, {
-    label: 'Pricing'
+    label: 'Careers',
+    to: '/careers'
   }, {
-    label: 'Careers'
+    label: 'Privacy Policy',
+    to: '/privacy'
   }, {
-    label: 'Blog'
+    label: 'Terms of Service',
+    to: '/terms'
+  }]
+}, {
+  label: 'Contact',
+  children: [{
+    label: 'Phone: +61 456 881 666',
+    href: 'tel:+61456881666'
+  }, {
+    label: 'Email: ops@bsbtransport.com.au',
+    href: 'mailto:ops@bsbtransport.com.au'
+  }, {
+    label: '7 hume hwy, Warwick Farm NSW 2170, Australia',
+    href: 'https://maps.google.com/?q=7+Hume+Highway,+Warwick+Farm+NSW+2170,+Australia',
+    target: '_blank'
+  }, {
+    label: 'Get Quote',
+    to: '/quote'
   }]
 }]
 
@@ -51,7 +70,7 @@ function onSubmit() {
 
 <template>
   <USeparator
-    icon="i-simple-icons-nuxtdotjs"
+    icon="i-lucide-truck"
     class="h-px"
   />
 
@@ -89,32 +108,32 @@ function onSubmit() {
 
     <template #left>
       <p class="text-sm text-muted">
-        Built with Nuxt UI • © {{ new Date().getFullYear() }}
+        © {{ new Date().getFullYear() }} BSB Transport Australia. All rights reserved.
       </p>
     </template>
 
     <template #right>
       <UButton
-        to="https://go.nuxt.com/discord"
+        to="https://www.facebook.com/bsbtransportaus"
         target="_blank"
-        icon="i-simple-icons-discord"
-        aria-label="Nuxt on Discord"
+        icon="i-lucide-facebook"
+        aria-label="BSB Transport on Facebook"
         color="neutral"
         variant="ghost"
       />
       <UButton
-        to="https://go.nuxt.com/x"
+        to="https://www.linkedin.com/company/bsb-transport-australia"
         target="_blank"
-        icon="i-simple-icons-x"
-        aria-label="Nuxt on X"
+        icon="i-lucide-linkedin"
+        aria-label="BSB Transport on LinkedIn"
         color="neutral"
         variant="ghost"
       />
       <UButton
-        to="https://github.com/nuxt-ui-templates/landing"
+        to="https://www.instagram.com/bsbtransportaus"
         target="_blank"
-        icon="i-simple-icons-github"
-        aria-label="Nuxt UI on GitHub"
+        icon="i-lucide-instagram"
+        aria-label="BSB Transport on Instagram"
         color="neutral"
         variant="ghost"
       />

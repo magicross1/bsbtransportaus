@@ -1,8 +1,46 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+/* Tailwind CSS 配置 */
 @source "../../../content/**/*";
 
 @theme {
   --font-sans: 'Public Sans', sans-serif;
+}
+
+/* 确保图标正确显示 - 强制显示规则 */
+.iconify,
+[data-icon],
+svg[data-icon] {
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  vertical-align: middle !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* UIcon 组件强制显示 */
+.ui-icon,
+[class*="ui-icon"] {
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  vertical-align: middle !important;
+}
+
+/* 防止图标闪烁和延迟显示 */
+.iconify,
+[data-icon],
+svg[data-icon],
+.ui-icon {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* 确保所有Lucide图标立即显示 */
+[data-icon*="lucide"] {
+  display: inline-block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }

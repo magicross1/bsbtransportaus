@@ -9,28 +9,31 @@ useHead({
     { key: 'theme-color', name: 'theme-color', content: color }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', href: '/favicon.ico' },
+    { rel: 'canonical', href: 'https://www.bsbtransport.com.au' }
   ],
   htmlAttrs: {
-    lang: 'en'
+    lang: 'en-AU'
   }
 })
 
 useSeoMeta({
-  ogImage: 'https://ui4.nuxt.com/assets/templates/nuxt/landing-light.png',
-  twitterImage: 'https://ui4.nuxt.com/assets/templates/nuxt/landing-light.png',
+  ogImage: 'https://www.bsbtransport.com.au/og-image.jpg',
+  twitterImage: 'https://www.bsbtransport.com.au/og-image.jpg',
   twitterCard: 'summary_large_image'
 })
 </script>
 
 <template>
-  <UApp :toaster="{ expand: false }">
-    <AppHeader />
+  <SEOProvider>
+    <UApp :toaster="{ expand: false }">
+      <AppHeader />
 
-    <UMain>
-      <NuxtPage />
-    </UMain>
+      <UMain>
+        <NuxtPage />
+      </UMain>
 
-    <AppFooter />
-  </UApp>
+      <AppFooter />
+    </UApp>
+  </SEOProvider>
 </template>

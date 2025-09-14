@@ -1,161 +1,241 @@
 seo:
-  title: Nuxt Landing Template
-  description: Boost your coding productivity with AI-driven insights that tell you when and how to code most efficiently.
-title: AI-Powered Developer Productivity Platform
-description: Boost your coding productivity with AI-driven insights that tell you when and how to code most efficiently.
+  title: BSB Transport Australia - Professional Container Transport Services
+  description: Leading container transport company in Australia. Specialized in trailer, sideloader, and container transport with safe, reliable, and on-time delivery across Australia.
+  keywords: container transport australia, trailer transport, sideloader transport, container storage, freight transport, logistics australia, BSB transport
+title: Professional Container Transport Services Across Australia
+description: BSB Transport Australia delivers reliable container transport solutions with specialized trailers, sideloaders, and professional logistics services. Safe, on-time, and professional delivery across Australia.
 hero:
   links:
-    - label: Get started
+    - label: Get Quote
       icon: i-lucide-arrow-right
       trailing: true
       color: primary
-      to: https://ui4.nuxt.com/docs/getting-started/installation/nuxt
-      target: _blank
+      to: /quote
       size: xl
-    - label: Clone on GitHub
-      icon: i-simple-icons-github
+    - label: Our Services
+      icon: i-lucide-truck
       size: xl
       color: neutral
       variant: outline
-      to: https://github.com/nuxt-ui-templates/landing
-      target: _blank
+      to: /services
 section:
-  title: '[Revolutionize]{.text-primary} your coding experience'
-  description: Transform your development workflow with AI-powered insights and personalized productivity optimization.
+  title: '[Reliable]{.text-primary} container transport solutions'
+  description: With years of experience in the Australian transport industry, BSB Transport provides specialized container transport services using state-of-the-art equipment and professional drivers.
   images:
-    mobile: '/images/macbook-mobile.svg'
-    desktop: '/images/macbook.svg'
+    mobile: '/images/index.png'
+    desktop: '/images/index.png'
   features:
-    - title: Optimize your focus time
-      description: Let AI identify your peak coding hours and adapt to your natural rhythm. Focus on what matters most - writing great code, while our system optimizes your productivity patterns.
+    - title: Specialized Equipment
+      description: Our fleet includes specialized trailers and sideloaders designed specifically for container transport, ensuring safe and efficient delivery of your cargo.
       class: border-l border-primary pl-4
-    - title: Track your best coding hours
-      description: Track when you code best with smart analytics. Get actionable insights to tackle challenging tasks during your peak performance hours.
+    - title: Professional Drivers
+      description: All our drivers are fully licensed, experienced, and trained in container handling procedures to ensure your cargo arrives safely and on time.
       class: border-l border-default pt-4 pl-4
-    - title: Improve workflow efficiency
-      description: Automate your workflow optimization from code snippets to focus management. Ship better code faster with a streamlined development process.
+    - title: Nationwide Coverage
+      description: We provide container transport services across Australia, from major ports to inland destinations, with comprehensive logistics support.
       class: border-l border-default pt-4 pl-4
 features:
-  title: Take control of your [productivity]{.text-primary}
-  description: Make every coding session count with smart analytics and workflow optimization.
+  title: Why choose BSB Transport [Australia]{.text-primary}
+  description: We are committed to providing the highest quality container transport services with safety, reliability, and professionalism at our core.
   features:
-    - title: AI-Powered Focus Tracking
-      description: Discover your optimal coding hours with real-time AI analysis of your productivity patterns.
-      icon: i-lucide-wand-sparkles
+    - title: Safe & Secure Transport
+      description: Advanced safety protocols and secure handling procedures ensure your containers are transported safely to their destination.
+      icon: i-lucide-shield-check
       ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Distraction Alerts
-      description: Get notified when your focus drifts and bring your attention back.
-      icon: i-lucide-bell-ring
+        leading: bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg border border-blue-200 dark:border-blue-800
+    - title: On-Time Delivery
+      description: Our efficient logistics network and experienced team ensure your containers arrive exactly when you need them.
+      icon: i-lucide-clock
       ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Smart Code Snippets
-      description: Save and reuse frequently used code blocks for efficiency.
-      icon: i-lucide-code-xml
+        leading: bg-green-50 dark:bg-green-900/20 p-3 rounded-lg border border-green-200 dark:border-green-800
+    - title: Professional Service
+      description: From initial consultation to final delivery, our team provides professional service and clear communication throughout.
+      icon: i-lucide-users
       ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Deep Work Mode
-      description: Block distractions and set structured coding sessions with built-in Pomodoro timers.
-      icon: i-lucide-moon
+        leading: bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg border border-purple-200 dark:border-purple-800
+    - title: Specialized Equipment
+      description: Modern fleet of specialized trailers and sideloaders designed for efficient container handling and transport.
+      icon: i-lucide-truck
       ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Collaborative Insights
-      description: Sync your workflow with teammates and see when they are most productive.
-      icon: i-lucide-mouse-pointer-2
+        leading: bg-orange-50 dark:bg-orange-900/20 p-3 rounded-lg border border-orange-200 dark:border-orange-800
+    - title: Insurance Coverage
+      description: Comprehensive insurance coverage provides peace of mind for your valuable cargo during transport.
+      icon: i-lucide-file-check
       ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Performance Analytics
-      description: Track your coding metrics and get insights to boost your speed and code quality.
-      icon: i-lucide-chart-line
+        leading: bg-cyan-50 dark:bg-cyan-900/20 p-3 rounded-lg border border-cyan-200 dark:border-cyan-800
+    - title: 24/7 Support
+      description: Round-the-clock customer support ensures you can reach us whenever you need assistance with your transport needs.
+      icon: i-lucide-phone
       ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
+        leading: bg-pink-50 dark:bg-pink-900/20 p-3 rounded-lg border border-pink-200 dark:border-pink-800
 steps:
-  title: Start coding smarter in [3 steps]{.text-primary}
-  description: Transform your development workflow with our AI-powered assistant.
+  title: Our streamlined transport [process]{.text-primary}
+  description: From request to delivery, we ensure efficient and reliable container transport with transparent communication at every step.
   items:
-    - title: Connect Your IDE
-      description: Seamlessly integrate with VS Code, JetBrains, or your preferred editor. Get started in under 2 minutes with zero configuration needed.
+    - title: Request Quote
+      description: Contact us with your container transport requirements. We'll provide a detailed quote with transparent pricing and timeline.
+      step: 1
+      icon: i-lucide-message-circle
       image:
         light: '/images/light/connect.svg'
         dark: '/images/dark/connect.svg'
-    - title: Track & Analyze
-      description: Our AI silently monitors your coding patterns to identify your peak productivity hours and potential workflow bottlenecks.
+    - title: Schedule Pickup
+      description: Once approved, we schedule pickup at your specified location with our specialized equipment and professional drivers.
+      step: 2
+      icon: i-lucide-calendar
       image:
         light: '/images/light/optimize.svg'
         dark: '/images/dark/optimize.svg'
-    - title: Optimize & Code Smarter
-      description: Receive personalized recommendations to enhance your coding efficiency. Watch your productivity soar with data-driven insights.
+    - title: Safe Delivery
+      description: Your container is transported safely and securely to its destination, with real-time tracking and delivery confirmation.
+      step: 3
+      icon: i-lucide-truck
+      image:
+        light: '/images/light/track.svg'
+        dark: '/images/dark/track.svg'
+    - title: De-hire & Completion
+      description: Container is safely returned to designated location with full documentation and delivery confirmation.
+      step: 4
+      icon: i-lucide-check-circle
       image:
         light: '/images/light/track.svg'
         dark: '/images/dark/track.svg'
 pricing:
-  title: Choose your [productivity]{.text-primary} path
-  description: Unlock AI-powered coding efficiency with our flexible plans. Whether you're a solo developer or part of a team, we have the perfect toolset to maximize your development workflow.
+  title: Choose your transport [service type]{.text-primary}
+  description: Compare the differences between our two main container transport methods to find the best solution for your needs.
   plans:
-    - title: Pro Developer
-      description: Perfect for individual developers focused on maximizing productivity.
-      price: $199
+    - title: Standard / Drop Trailer Transport
+      description: Container stays on trailer - more cost-effective solution.
       features:
-        - AI productivity tracking to optimize your peak coding hours
-        - Smart distraction alerts to maintain deep focus
-        - Personal code snippet library for faster development
-        - Deep Work Mode with Pomodoro timer integration
-        - Performance analytics dashboard
-        - Priority email support
+        - Container stays on trailer (no drop-off)
+        - More cost-effective pricing
+        - All container types and sizes
+        - Direct delivery service (1-3 days)
+        - Enhanced insurance coverage
+        - Real-time tracking
       button:
-        label: Buy now
+        label: Get Quote
         color: neutral
         variant: outline
-        to: '#'
-    - title: Team Developer
-      description: For bootstrappers and indie hackers.
-      price: $199
+        to: /quote
+    - title: Sideloader Transport
+      description: Container drops to ground - flexible unloading option.
       features:
-        - Everything in Pro Developer
-        - Team productivity analytics and insights
-        - Collaborative code snippet sharing
-        - Cross-team performance tracking
-        - Synchronized deep work sessions
-        - Priority team support with dedicated manager
+        - Container drops to ground for flexible unloading
+        - Higher pricing but more flexible unloading time
+        - All container types and sizes
+        - Standard delivery timeframe (2-5 days)
+        - Enhanced insurance coverage
+        - Real-time tracking
+
       button:
-        label: Buy now
+        label: Get Quote
         variant: subtle
-        to: '#'
+        to: /quote
 testimonials:
-  title: Join thousands of productive [developers]{.text-primary}
-  description: See how developers are transforming their coding workflow and achieving more with our AI-powered platform.
+  title: Trusted by businesses across [Australia]{.text-primary}
+  description: See what our clients say about our professional container transport services and reliable delivery.
   items:
-    - quote: Since using this tool, my productivity has doubled. The AI insights helped me find my perfect coding rhythm and now I ship features twice as fast.
+    - quote: BSB Transport has been our go-to partner for container transport for over 3 years. Their reliability and professionalism are unmatched in the industry.
       user:
-        name: 'Sarah Moriceau'
-        description: 'Brand Designer'
+        name: 'Michael Garcia'
+        description: 'Logistics Manager, Sydney Port'
+        industry: 'Shipping & Port Operations'
         target: _blank
         avatar:
           src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/SarahM19'
-    - quote: Game-changer for our team. The focus tracking and smart alerts helped us reduce meeting interruptions by 40% and increased our sprint velocity.
+    - quote: The team at BSB Transport understands our business needs and always delivers on time. Their specialized equipment makes container handling seamless.
       user:
-        name: 'Sébastien Chopin'
-        description:  'Lead Software Engineer'
+        name: 'Sarah Johnson'
+        description: 'Operations Director, Melbourne'
+        industry: 'Manufacturing & Distribution'
         target: _blank
         avatar:
           src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/atinux'
-    - quote: Finally, a productivity tool that understands developers. The AI features helped me identify my peak coding hours and now I accomplish more in less time.
+    - quote: Professional service from start to finish. BSB Transport's attention to detail and safety protocols give us complete confidence in their services.
       user:
-        name: 'Benjamin Canac'
-        description:  'Senior Frontend Developer'
+        name: 'David Li'
+        description: 'Supply Chain Manager, Brisbane'
+        industry: 'E-commerce & Retail'
         target: _blank
         avatar:
           src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/benjamincanac'
+    - quote: Outstanding container transport service! BSB Transport's fleet management and driver professionalism exceed our expectations every time.
+      user:
+        name: 'Emma Thompson'
+        description: 'Warehouse Manager, Canberra'
+        industry: 'Government & Infrastructure'
+        target: _blank
+        avatar:
+          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/emma'
+    - quote: We've been using BSB Transport for our import-export operations for 2 years. Their port-to-door service is consistently reliable and cost-effective.
+      user:
+        name: 'James Rodriguez'
+        description: 'Import Coordinator, Newcastle'
+        industry: 'International Trade'
+        target: _blank
+        avatar:
+          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/james'
+    - quote: BSB Transport's sideloader service has revolutionized our container handling. The flexibility and efficiency are exactly what we needed.
+      user:
+        name: 'Lisa Jones'
+        description: 'Distribution Manager, Wollongong'
+        industry: 'Retail & Distribution'
+        target: _blank
+        avatar:
+          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/lisa'
+    - quote: Excellent communication and tracking system. We always know exactly where our containers are and when they'll arrive.
+      user:
+        name: 'Robert Taylor'
+        description: 'Fleet Operations Manager, Geelong'
+        industry: 'Automotive & Manufacturing'
+        target: _blank
+        avatar:
+          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/robert'
+    - quote: BSB Transport's express service saved us during a critical delivery deadline. Their team went above and beyond to meet our needs.
+      user:
+        name: 'Maria Garcia'
+        description: 'Procurement Director, Ballarat'
+        industry: 'Healthcare & Pharmaceuticals'
+        target: _blank
+        avatar:
+          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/maria'
+    - quote: The safety record and insurance coverage give us complete peace of mind. BSB Transport is our trusted logistics partner.
+      user:
+        name: 'Andrew Kim'
+        description: 'Supply Chain Director, Bendigo'
+        industry: 'Agriculture & Food Processing'
+        target: _blank
+        avatar:
+          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/andrew'
+    - quote: Professional drivers, modern equipment, and competitive pricing. BSB Transport delivers exactly what they promise, every time.
+      user:
+        name: 'Jennifer Brown'
+        description: 'Logistics Coordinator, Albury'
+        industry: 'Textiles & Fashion'
+        target: _blank
+        avatar:
+          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/jennifer'
+    - quote: BSB Transport's nationwide coverage and local expertise make them the perfect choice for our multi-state operations.
+      user:
+        name: 'Thomas Anderson'
+        description: 'Regional Operations Manager, Wagga Wagga'
+        industry: 'Mining & Resources'
+        target: _blank
+        avatar:
+          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/thomas'
 cta:
-  title: Ready to build an amazing landing page?
-  description: Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today.
+  title: Ready to transport your containers safely?
+  description: NSW/VIC/ACT metro coverage · Port direct service · 98% on-time delivery
+  subtitle: Contact BSB Transport Australia today for a professional container transport quote. Safe, reliable, and on-time delivery guaranteed.
   links:
-    - label: Start building
-      to: 'https://ui4.nuxt.com/docs/getting-started/installation/nuxt'
-      target: _blank
+    - label: Get Quote Now
+      to: /quote
       trailingIcon: i-lucide-arrow-right
-    - label: View on GitHub
-      to: 'https://github.com/nuxt-ui-templates/landing'
-      target: _blank
-      variant: subtle
-      icon: i-simple-icons-github
+      color: primary
+      size: xl
+    - label: Contact Us
+      to: /contact
+      variant: outline
+      icon: i-lucide-phone
+      size: xl
