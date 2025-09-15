@@ -116,7 +116,7 @@ export default defineNuxtConfig({
   // 图标配置 - 静态构建时强制内联
   icon: {
     serverBundle: 'local',
-    collections: ['lucide'],
+    collections: ['lucide', 'simple-icons'],
     // 关键：静态构建时强制内联所有图标
     static: true,
     mode: 'inline'

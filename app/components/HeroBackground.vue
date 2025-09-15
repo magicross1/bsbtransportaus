@@ -28,7 +28,7 @@ const initAnimation = () => {
 
 onMounted(() => {
   initAnimation()
-
+  
   // 确保视频自动播放
   nextTick(() => {
     if (videoElement.value) {
@@ -58,7 +58,7 @@ watch(() => route.path, (newPath, oldPath) => {
 const onVideoLoaded = () => {
   videoLoaded.value = true
   videoReady.value = true
-
+  
   // 确保视频开始播放
   if (videoElement.value) {
     videoElement.value.play().catch(err => {
@@ -101,11 +101,11 @@ const onVideoPause = () => {
 <template>
   <div class="absolute inset-0 w-full h-full overflow-hidden">
     <!-- 视频背景 -->
-    <video
+    <video 
       ref="videoElement"
-      autoplay
-      muted
-      loop
+      autoplay 
+      muted 
+      loop 
       playsinline
       preload="auto"
       class="absolute inset-0 w-full h-full object-cover opacity-80"
@@ -119,10 +119,10 @@ const onVideoPause = () => {
       <!-- 如果视频加载失败，显示提示 -->
       您的浏览器不支持视频播放
     </video>
-
+    
     <!-- 视频遮罩层 - 确保文字可读性 -->
     <div class="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
-
+    
     <!-- 原有的SVG装饰层 - 作为备用和装饰 -->
     <div
       class="absolute w-full -top-px transition-all text-primary shrink-0"
@@ -134,7 +134,7 @@ const onVideoPause = () => {
       <svg
         viewBox="0 0 1440 181"
         fill="none"
-        xmlns="https://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/2000/svg"
         class="pointer-events-none"
       >
         <mask

@@ -116,7 +116,7 @@ function onSubmit() {
       <UButton
         to="https://www.facebook.com/bsbtransportaus"
         target="_blank"
-        icon="i-lucide-facebook"
+        icon="i-simple-icons-facebook"
         aria-label="BSB Transport on Facebook"
         color="neutral"
         variant="ghost"
@@ -124,7 +124,7 @@ function onSubmit() {
       <UButton
         to="https://www.linkedin.com/company/bsb-transport-australia"
         target="_blank"
-        icon="i-lucide-linkedin"
+        icon="i-simple-icons-linkedin"
         aria-label="BSB Transport on LinkedIn"
         color="neutral"
         variant="ghost"
@@ -132,7 +132,7 @@ function onSubmit() {
       <UButton
         to="https://www.instagram.com/bsbtransportaus"
         target="_blank"
-        icon="i-lucide-instagram"
+        icon="i-simple-icons-instagram"
         aria-label="BSB Transport on Instagram"
         color="neutral"
         variant="ghost"
