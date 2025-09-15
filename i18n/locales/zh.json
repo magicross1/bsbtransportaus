@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "首页",
+    "services": "服务",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "title": "澳大利亚专业集装箱运输服务",
+    "description": "BSB Transport Australia提供可靠的集装箱运输解决方案，配备专业拖车、侧装机和专业物流服务。安全、准时、专业的澳大利亚全境配送服务。",
+    "getQuote": "获取报价",
+    "ourServices": "我们的服务"
+  },
+  "features": {
+    "title": "为什么选择BSB Transport Australia",
+    "description": "我们致力于提供最高质量的集装箱运输服务，以安全、可靠和专业为核心。",
+    "safeTransport": "安全可靠运输",
+    "onTimeDelivery": "准时送达",
+    "professionalService": "专业服务",
+    "specializedEquipment": "专业设备",
+    "insuranceCoverage": "保险保障",
+    "support24": "24/7支持"
+  },
+  "contact": {
+    "title": "联系BSB Transport Australia",
+    "description": "联系我们获取专业集装箱运输服务",
+    "phone": "电话",
+    "email": "邮箱",
+    "address": "地址"
+  }
+}

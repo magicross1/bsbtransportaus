@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Professional Container Transport Services Across Australia",
+    "description": "BSB Transport Australia delivers reliable container transport solutions with specialized trailers, sideloaders, and professional logistics services. Safe, on-time, and professional delivery across Australia.",
+    "getQuote": "Get Quote",
+    "ourServices": "Our Services"
+  },
+  "features": {
+    "title": "Why choose BSB Transport Australia",
+    "description": "We are committed to providing the highest quality container transport services with safety, reliability, and professionalism at our core.",
+    "safeTransport": "Safe & Secure Transport",
+    "onTimeDelivery": "On-Time Delivery",
+    "professionalService": "Professional Service",
+    "specializedEquipment": "Specialized Equipment",
+    "insuranceCoverage": "Insurance Coverage",
+    "support24": "24/7 Support"
+  },
+  "contact": {
+    "title": "Contact BSB Transport Australia",
+    "description": "Get in touch for professional container transport services",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address"
+  }
+}
