@@ -205,6 +205,7 @@ def main():
     try:
         # 1) 先压缩本地目录
         print(f"[INFO] Zipping local directory: {local_dir}")
+        os.system(f"pnpm generate")
         zip_path = make_local_zip(local_dir)
         print(f"[INFO] Created zip: {zip_path}")
 
