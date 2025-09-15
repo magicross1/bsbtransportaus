@@ -38,7 +38,7 @@ const features = [
     description: 'Advanced integration solutions for seamless communication between different business systems.'
   },
   {
-    icon: 'i-lucide-zap',
+    icon: 'lucide:zap',
     title: 'Real-Time Data Automation',
     description: 'Automated data processing and real-time updates across all connected systems and platforms.'
   },

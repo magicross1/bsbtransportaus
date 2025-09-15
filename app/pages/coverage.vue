@@ -29,7 +29,7 @@ const serviceAreas = [
     areas: ['Newcastle', 'Wollongong', 'Geelong'],
     deliveryTime: '1-2 Days',
     surcharge: 'Special Rate',
-    icon: 'i-lucide-map-pin',
+    icon: 'lucide:map-pin',
     color: 'blue'
   },
   {
@@ -115,7 +115,7 @@ const additionalCharges = [
     service: 'Express Service',
     charge: '+0%',
     description: 'Priority delivery within 24 hours',
-    icon: 'i-lucide-zap'
+    icon: 'lucide:zap'
   },
   {
   service: 'DG Goods Handling',
@@ -404,7 +404,7 @@ const additionalCharges = [
             <div class="absolute top-6 left-6 bg-black/60 backdrop-blur-md p-6 rounded-2xl border border-white/30 shadow-2xl">
               <div class="space-y-3">
                 <h3 class="text-white text-lg font-bold mb-3 flex items-center">
-                  <UIcon name="i-lucide-map-pin" class="w-5 h-5 mr-2" />
+                  <UIcon name="lucide:map-pin" class="w-5 h-5 mr-2" />
                   Coverage Areas
                 </h3>
                 <div class="flex items-center space-x-3">

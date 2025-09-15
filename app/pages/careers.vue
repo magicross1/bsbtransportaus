@@ -465,9 +465,9 @@ Best regards,
                     class="relative z-10 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 hover:from-purple-700 hover:via-blue-700 hover:to-indigo-700 border-0 px-16 py-5 font-bold text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
                   >
                     <div class="flex items-center space-x-4">
-                      <UIcon name="i-lucide-mail" class="w-6 h-6" />
+                      <UIcon name="lucide:mail" class="w-6 h-6" />
                       <span>Open Email Client</span>
-                      <UIcon name="i-lucide-external-link" class="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+                      <UIcon name="lucide:external-link" class="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </UButton>
 
@@ -483,7 +483,7 @@ Best regards,
               <!-- Quick Application Templates -->
               <div class="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-2xl p-6 border border-purple-200 dark:border-purple-700">
                 <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                  <UIcon name="i-lucide-zap" class="w-5 h-5 text-yellow-500 mr-2" />
+                  <UIcon name="lucide:zap" class="w-5 h-5 text-yellow-500 mr-2" />
                   Quick Application Templates
                 </h4>
 
@@ -552,7 +552,7 @@ Best regards,
                 <!-- Application Guidelines -->
                 <div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
                   <h5 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                    <UIcon name="i-lucide-info" class="w-4 h-4 text-blue-500 mr-2" />
+                    <UIcon name="lucide:info" class="w-4 h-4 text-blue-500 mr-2" />
                     Application Guidelines
                   </h5>
                   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-gray-600 dark:text-gray-300">
@@ -696,7 +696,7 @@ Best regards,
               <div class="flex items-center space-x-3">
                 <UIcon name="i-lucide-phone" class="w-5 h-5" />
                 <span>Contact HR</span>
-                <UIcon name="i-lucide-external-link" class="w-4 h-4" />
+                <UIcon name="lucide:external-link" class="w-4 h-4" />
               </div>
             </UButton>
           </div>

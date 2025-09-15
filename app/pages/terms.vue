@@ -111,7 +111,7 @@ const termsSections = [
           
           <!-- Last Updated -->
           <div class="inline-flex items-center px-4 py-2 bg-indigo-100 dark:bg-indigo-900 rounded-lg">
-            <UIcon name="i-lucide-calendar" class="mr-2 text-indigo-600 dark:text-indigo-400" />
+            <UIcon name="lucide:calendar" class="mr-2 text-indigo-600 dark:text-indigo-400" />
             <span class="text-indigo-800 dark:text-indigo-200 font-medium">Last Updated: January 15, 2025</span>
           </div>
         </div>
@@ -206,7 +206,7 @@ const termsSections = [
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="flex items-start">
-                <UIcon name="i-lucide-mail" class="text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" />
+                <UIcon name="lucide:mail" class="text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <p class="font-semibold text-gray-900 dark:text-white">Email</p>
                   <a href="mailto:admin@bsbtransport.com.au" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors">
@@ -228,7 +228,7 @@ const termsSections = [
               </div>
               
               <div class="flex items-start md:col-span-2">
-                <UIcon name="i-lucide-map-pin" class="text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" />
+                <UIcon name="lucide:map-pin" class="text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <p class="font-semibold text-gray-900 dark:text-white">Registered Office</p>
                   <p class="text-gray-600 dark:text-gray-300">

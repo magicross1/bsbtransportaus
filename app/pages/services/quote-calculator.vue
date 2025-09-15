@@ -18,7 +18,7 @@ const breadcrumbs = [
 // 计算器特性
 const features = [
   {
-    icon: 'i-lucide-calculator',
+    icon: 'lucide:calculator',
     title: 'Instant Pricing Calculation',
     description: 'Get immediate pricing estimates for your transport requirements with real-time rate calculations.'
   },
@@ -95,7 +95,7 @@ const usageSteps = [
     step: 3,
     title: 'Instant Calculation',
     description: 'Get immediate pricing with detailed cost breakdown and service recommendations.',
-    icon: 'i-lucide-calculator'
+    icon: 'lucide:calculator'
   },
   {
     step: 4,

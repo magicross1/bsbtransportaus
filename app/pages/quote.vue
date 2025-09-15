@@ -269,7 +269,7 @@ const scrollToEmailSection = () => {
             <template #header>
                 <div class="text-center pb-4 border-b border-gray-200/50 dark:border-gray-700/50 relative z-10">
                   <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-600 rounded-full mb-4 shadow-lg shadow-blue-500/25 group-hover:shadow-blue-500/40 transition-all duration-300">
-                    <UIcon name="i-lucide-calculator" class="text-2xl text-white" />
+                    <UIcon name="lucide:calculator" class="text-2xl text-white" />
                   </div>
                   <h3 class="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-2">
                     Transport Details
@@ -323,7 +323,7 @@ const scrollToEmailSection = () => {
                           class="px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-600 last:border-b-0 transition-colors duration-150"
                         >
                           <div class="flex items-center">
-                            <UIcon name="i-lucide-map-pin" class="text-blue-500 mr-3" />
+                            <UIcon name="lucide:map-pin" class="text-blue-500 mr-3" />
                             <span class="font-medium">{{ city }}</span>
                           </div>
                         </div>
@@ -387,7 +387,7 @@ const scrollToEmailSection = () => {
                 <!-- Important Notice -->
                 <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
                   <div class="flex items-start">
-                    <UIcon name="i-lucide-info" class="text-blue-600 dark:text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <UIcon name="lucide:info" class="text-blue-600 dark:text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
                     <div>
                       <p class="text-sm text-blue-800 dark:text-blue-200 font-medium mb-1">
                         Important: Please click "Calculate Quote" after making any changes
@@ -421,7 +421,7 @@ const scrollToEmailSection = () => {
                     class="flex-1 sm:flex-none bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 relative z-20 group"
                   >
                     <template #leading>
-                      <UIcon name="i-lucide-calculator" v-if="!isLoading" class="group-hover:animate-pulse" />
+                      <UIcon name="lucide:calculator" v-if="!isLoading" class="group-hover:animate-pulse" />
                       <UIcon name="i-lucide-loader-2" v-else class="animate-spin" />
                     </template>
                     {{ isLoading ? 'Calculating...' : 'Calculate Quote' }}
@@ -451,7 +451,7 @@ const scrollToEmailSection = () => {
                 <template #header>
                   <div class="text-center pb-3 border-b border-gray-200 dark:border-gray-700">
                     <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-full mb-3">
-                      <UIcon name="i-lucide-help-circle" class="text-xl text-white" />
+                      <UIcon name="lucide:help-circle" class="text-xl text-white" />
                     </div>
                     <h3 class="text-lg font-bold text-orange-900 dark:text-orange-100">
                       Contact Support Required
@@ -469,7 +469,7 @@ const scrollToEmailSection = () => {
                     class="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     <template #leading>
-                      <UIcon name="i-lucide-help-circle" />
+                      <UIcon name="lucide:help-circle" />
                     </template>
                     Contact Our Team
                     <template #trailing>
@@ -595,7 +595,7 @@ const scrollToEmailSection = () => {
                       class="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       <template #leading>
-                        <UIcon name="i-lucide-mail" />
+                        <UIcon name="lucide:mail" />
                       </template>
                       Confirm This Quote
                       <template #trailing>
@@ -610,7 +610,7 @@ const scrollToEmailSection = () => {
               <UCard v-else class="shadow-xl border-0 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
                 <div class="text-center py-8">
                   <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-gray-400 to-blue-500 rounded-full mb-4">
-                    <UIcon name="i-lucide-calculator" class="text-xl text-white" />
+                    <UIcon name="lucide:calculator" class="text-xl text-white" />
                   </div>
                   <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Ready to Calculate</h3>
                   <p class="text-gray-600 dark:text-gray-300 text-sm">
@@ -663,7 +663,7 @@ const scrollToEmailSection = () => {
                 </div>
                 
                 <div v-else class="text-center py-6">
-                  <UIcon name="i-lucide-info" class="text-2xl text-gray-400 dark:text-gray-500 mb-2" />
+                  <UIcon name="lucide:info" class="text-2xl text-gray-400 dark:text-gray-500 mb-2" />
                   <p class="text-gray-600 dark:text-gray-300 text-xs">
                     Select a service type to see available additional fees
                   </p>
@@ -695,7 +695,7 @@ const scrollToEmailSection = () => {
               <!-- Contact Information -->
               <div class="text-center">
                 <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full mb-6">
-                  <UIcon name="i-lucide-mail" class="text-3xl text-blue-600 dark:text-blue-400" />
+                  <UIcon name="lucide:mail" class="text-3xl text-blue-600 dark:text-blue-400" />
                 </div>
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   ops@bsbtransport.com.au
@@ -712,7 +712,7 @@ const scrollToEmailSection = () => {
                 >
                   Open Email Client
                   <template #trailing>
-                    <UIcon name="i-lucide-external-link" />
+                    <UIcon name="lucide:external-link" />
                   </template>
                 </UButton>
               </div>
@@ -820,7 +820,7 @@ const scrollToEmailSection = () => {
                   <UCard class="border border-purple-200 dark:border-purple-700 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">
                     <template #header>
                       <div class="flex items-center">
-                        <UIcon name="i-lucide-info" class="text-purple-600 dark:text-purple-400 mr-2" />
+                        <UIcon name="lucide:info" class="text-purple-600 dark:text-purple-400 mr-2" />
                         <h4 class="font-semibold text-gray-900 dark:text-white">Service Inquiry:</h4>
                       </div>
                     </template>
@@ -855,7 +855,7 @@ const scrollToEmailSection = () => {
                         :to="`mailto:ops@bsbtransport.com.au?subject=Service Inquiry - Container Transport Services&body=Hello BSB Transport Team,%0D%0A%0D%0AI'm interested in learning more about your container transport services:%0D%0A%0D%0AServices of Interest:%0D%0A• Standard Trailer Services%0D%0A• Sideloader Services%0D%0A• Drop Trailer Services%0D%0A• Container Storage%0D%0A• Import/Export Services%0D%0A%0D%0AQuestions:%0D%0A• What are your service areas?%0D%0A• Do you provide 24/7 emergency services?%0D%0A• What insurance coverage do you offer?%0D%0A• Can you handle specialized containers?%0D%0A%0D%0AContact Information:%0D%0A• Name: [Your Name]%0D%0A• Company: [Your Company]%0D%0A• Email: [Your Email]%0D%0A• Phone: [Your Phone]%0D%0A%0D%0APlease provide more information about your capabilities.%0D%0A%0D%0AThank you!`"
                       >
                         <template #leading>
-                          <UIcon name="i-lucide-info" />
+                          <UIcon name="lucide:info" />
                         </template>
                         Service Inquiry
                       </UButton>

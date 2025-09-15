@@ -144,7 +144,7 @@ const departments = [
   {
     name: 'Finance & Admin',
     description: 'Automated financial management systems and streamlined administrative processes for operational excellence.',
-    icon: 'i-lucide-calculator'
+    icon: 'lucide:calculator'
   },
   {
     name: 'Maintenance',

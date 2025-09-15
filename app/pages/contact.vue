@@ -39,7 +39,7 @@ const contactChannels = [
     title: 'Phone Support',
     description: 'Call us directly for immediate assistance',
     contact: '+61 456 881 666',
-    icon: 'i-lucide-phone',
+    icon: 'lucide:phone',
     color: 'blue',
     available: '24/7 Emergency'
   },
@@ -47,7 +47,7 @@ const contactChannels = [
     title: 'Email Support',
     description: 'Send us an email for detailed inquiries',
     contact: 'ops@bsbtransport.com.au',
-    icon: 'i-lucide-mail',
+    icon: 'lucide:mail',
     color: 'green',
     available: 'Response within 2 hours'
   },
@@ -55,7 +55,7 @@ const contactChannels = [
     title: 'Live Chat',
     description: 'Chat with our support team online',
     contact: 'Start Chat(update soon)',
-    icon: 'i-lucide-message-circle',
+    icon: 'lucide:message-circle',
     color: 'purple',
     available: 'Mon-Fri 8AM-6PM'
   },
@@ -63,7 +63,7 @@ const contactChannels = [
     title: 'Office Visit',
     description: 'Visit our office for face-to-face consultation',
     contact: '7 hume hwy, Warwick Farm NSW 2170, Australia',
-    icon: 'i-lucide-map-pin',
+    icon: 'lucide:map-pin',
     color: 'orange',
     available: 'Mon-Fri 9AM-5PM'
   }
@@ -78,7 +78,7 @@ const officeLocations = [
     email: 'ops@bsbtransport.com.au',
     hours: 'Mon-Fri: 6AM-6PM, Sat: 8AM-4PM',
     image: '/images/offices/sydney-office.jpg',
-    icon: 'i-lucide-building',
+    icon: 'lucide:building',
     coordinates: {
       lat: -33.9205,
       lng: 150.8889
@@ -92,7 +92,7 @@ const officeLocations = [
     email: 'ops@bsbtransport.com.au',
     hours: 'Mon-Fri: 6AM-6PM, Sat: 8AM-4PM',
     image: '/images/offices/melbourne-office.jpg',
-    icon: 'i-lucide-building',
+    icon: 'lucide:building',
     coordinates: {
       lat: -37.8136,
       lng: 144.9631
@@ -106,7 +106,7 @@ const officeLocations = [
     email: 'ops@bsbtransport.com.au',
     hours: 'coming soon',
     image: '/images/offices/brisbane-office.jpg',
-    icon: 'i-lucide-building',
+    icon: 'lucide:building',
     coordinates: {
       lat: -27.4698,
       lng: 153.0251
@@ -150,17 +150,17 @@ const generateEmailLink = (template: string) => {
           <!-- Quick Contact Info -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div class="text-center">
-              <UIcon name="i-lucide-phone" class="text-3xl text-green-600 dark:text-green-400 mb-2" />
+              <UIcon name="lucide:phone" class="text-3xl text-green-600 dark:text-green-400 mb-2" />
               <div class="font-semibold text-gray-900 dark:text-white">{{ contactInfo.phone }}</div>
               <div class="text-sm text-gray-600 dark:text-gray-300">24/7 Emergency</div>
             </div>
             <div class="text-center">
-              <UIcon name="i-lucide-mail" class="text-3xl text-blue-600 dark:text-blue-400 mb-2" />
+              <UIcon name="lucide:mail" class="text-3xl text-blue-600 dark:text-blue-400 mb-2" />
               <div class="font-semibold text-gray-900 dark:text-white">{{ contactInfo.email }}</div>
               <div class="text-sm text-gray-600 dark:text-gray-300">Quick Response</div>
             </div>
             <div class="text-center">
-              <UIcon name="i-lucide-map-pin" class="text-3xl text-purple-600 dark:text-purple-400 mb-2" />
+              <UIcon name="lucide:map-pin" class="text-3xl text-purple-600 dark:text-purple-400 mb-2" />
               <div class="font-semibold text-gray-900 dark:text-white">Sydney Office</div>
               <div class="text-sm text-gray-600 dark:text-gray-300">Visit Us</div>
             </div>
@@ -235,7 +235,7 @@ const generateEmailLink = (template: string) => {
         <div class="max-w-4xl mx-auto">
           <div class="text-center mb-16">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6">
-              <UIcon name="i-lucide-mail" class="w-8 h-8 text-white" />
+              <UIcon name="lucide:mail" class="w-8 h-8 text-white" />
             </div>
             <h2 class="text-5xl font-bold text-white mb-6">
               Send Us an Email
@@ -255,7 +255,7 @@ const generateEmailLink = (template: string) => {
                 <!-- Email Address Display -->
                 <div class="text-center mb-8">
                   <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-full mb-6">
-                    <UIcon name="i-lucide-at-sign" class="text-3xl text-blue-600 dark:text-blue-400" />
+                    <UIcon name="lucide:at-sign" class="text-3xl text-blue-600 dark:text-blue-400" />
                   </div>
                   <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                     ops@bsbtransport.com.au
@@ -281,16 +281,16 @@ const generateEmailLink = (template: string) => {
                       class="relative z-10 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 hover:from-blue-700 hover:via-purple-700 hover:to-cyan-700 border-0 px-16 py-5 font-bold text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
                     >
                       <div class="flex items-center space-x-4">
-                        <UIcon name="i-lucide-mail" class="w-6 h-6" />
+                        <UIcon name="lucide:mail" class="w-6 h-6" />
                         <span>Open Email Client</span>
-                        <UIcon name="i-lucide-external-link" class="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+                        <UIcon name="lucide:external-link" class="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </UButton>
 
                     <!-- Success Animation -->
                     <div class="absolute -top-3 -right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div class="w-6 h-6 bg-green-400 rounded-full animate-bounce shadow-lg flex items-center justify-center">
-                        <UIcon name="i-lucide-check" class="w-4 h-4 text-white" />
+                        <UIcon name="lucide:check" class="w-4 h-4 text-white" />
                       </div>
                     </div>
                   </a>
@@ -299,7 +299,7 @@ const generateEmailLink = (template: string) => {
                 <!-- Quick Email Templates -->
                 <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 border border-blue-200 dark:border-blue-700">
                   <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                    <UIcon name="i-lucide-zap" class="w-5 h-5 text-yellow-500 mr-2" />
+                    <UIcon name="lucide:zap" class="w-5 h-5 text-yellow-500 mr-2" />
                     Quick Email Templates
                   </h4>
 
@@ -307,7 +307,7 @@ const generateEmailLink = (template: string) => {
                     <!-- Quote Request Template -->
                     <div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow duration-200">
                       <div class="flex items-center mb-3">
-                        <UIcon name="i-lucide-calculator" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
+                        <UIcon name="lucide:calculator" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
                         <h5 class="font-semibold text-gray-900 dark:text-white text-sm">Quote Request</h5>
                       </div>
                       <p class="text-xs text-gray-600 dark:text-gray-300 mb-3">
@@ -327,7 +327,7 @@ const generateEmailLink = (template: string) => {
                     <!-- Service Inquiry Template -->
                     <div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow duration-200">
                       <div class="flex items-center mb-3">
-                        <UIcon name="i-lucide-info" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
+                        <UIcon name="lucide:info" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
                         <h5 class="font-semibold text-gray-900 dark:text-white text-sm">Service Inquiry</h5>
                       </div>
                       <p class="text-xs text-gray-600 dark:text-gray-300 mb-3">
@@ -347,7 +347,7 @@ const generateEmailLink = (template: string) => {
                     <!-- General Questions Template -->
                     <div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow duration-200">
                       <div class="flex items-center mb-3">
-                        <UIcon name="i-lucide-help-circle" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
+                        <UIcon name="lucide:help-circle" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
                         <h5 class="font-semibold text-gray-900 dark:text-white text-sm">General Questions</h5>
                       </div>
                       <p class="text-xs text-gray-600 dark:text-gray-300 mb-3">
@@ -369,7 +369,7 @@ const generateEmailLink = (template: string) => {
                 <!-- Response Time Info -->
                 <div class="mt-8 p-4 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl border border-green-200 dark:border-green-700">
                   <div class="flex items-center justify-center space-x-2">
-                    <UIcon name="i-lucide-clock" class="w-5 h-5 text-green-600 dark:text-green-400" />
+                    <UIcon name="lucide:clock" class="w-5 h-5 text-green-600 dark:text-green-400" />
                     <p class="text-sm font-medium text-green-800 dark:text-green-300">
                       We'll respond within
                       <span class="font-bold text-green-900 dark:text-green-200">2 hours</span>
@@ -381,15 +381,15 @@ const generateEmailLink = (template: string) => {
                 <!-- Additional Contact Options -->
                 <div class="mt-6 flex items-center justify-center space-x-6 text-xs text-gray-500 dark:text-gray-400">
                   <div class="flex items-center space-x-1">
-                    <UIcon name="i-lucide-shield-check" class="w-4 h-4" />
+                    <UIcon name="lucide:shield-check" class="w-4 h-4" />
                     <span>Secure & Confidential</span>
                   </div>
                   <div class="flex items-center space-x-1">
-                    <UIcon name="i-lucide-phone" class="w-4 h-4" />
+                    <UIcon name="lucide:phone" class="w-4 h-4" />
                     <span>Phone: +61 456 881 666</span>
                   </div>
                   <div class="flex items-center space-x-1">
-                    <UIcon name="i-lucide-clock" class="w-4 h-4" />
+                    <UIcon name="lucide:clock" class="w-4 h-4" />
                     <span>24/7 Emergency</span>
                   </div>
                 </div>
@@ -442,28 +442,28 @@ const generateEmailLink = (template: string) => {
 
             <div class="space-y-4">
               <div class="flex items-start">
-                <UIcon name="i-lucide-map-pin" class="text-gray-500 mr-3 mt-1 flex-shrink-0" />
+                <UIcon name="lucide:map-pin" class="text-gray-500 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <p class="text-gray-600 dark:text-gray-300">{{ office.address }}</p>
                 </div>
               </div>
 
               <div class="flex items-start">
-                <UIcon name="i-lucide-phone" class="text-gray-500 mr-3 mt-1 flex-shrink-0" />
+                <UIcon name="lucide:phone" class="text-gray-500 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <p class="text-gray-600 dark:text-gray-300">{{ office.phone }}</p>
                 </div>
               </div>
 
               <div class="flex items-start">
-                <UIcon name="i-lucide-mail" class="text-gray-500 mr-3 mt-1 flex-shrink-0" />
+                <UIcon name="lucide:mail" class="text-gray-500 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <p class="text-gray-600 dark:text-gray-300">{{ office.email }}</p>
                 </div>
               </div>
 
               <div class="flex items-start">
-                <UIcon name="i-lucide-clock" class="text-gray-500 mr-3 mt-1 flex-shrink-0" />
+                <UIcon name="lucide:clock" class="text-gray-500 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <p class="text-gray-600 dark:text-gray-300">{{ office.hours }}</p>
                 </div>
@@ -478,7 +478,7 @@ const generateEmailLink = (template: string) => {
                   color="primary"
                   class="w-full"
                 >
-                  <UIcon name="i-lucide-navigation" class="mr-2" />
+                  <UIcon name="lucide:navigation" class="mr-2" />
                   Get Directions
                 </UButton>
               </div>
@@ -505,7 +505,7 @@ const generateEmailLink = (template: string) => {
             <div class="space-y-6">
               <div class="flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-lg">
                 <div class="flex items-center">
-                  <UIcon name="i-lucide-calendar-days" class="text-blue-600 dark:text-blue-400 mr-3" />
+                  <UIcon name="lucide:calendar-days" class="text-blue-600 dark:text-blue-400 mr-3" />
                   <span class="font-semibold text-gray-900 dark:text-white">Weekdays</span>
                 </div>
                 <span class="text-gray-600 dark:text-gray-300">{{ contactInfo.businessHours.weekdays }}</span>
@@ -513,7 +513,7 @@ const generateEmailLink = (template: string) => {
 
               <div class="flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-lg">
                 <div class="flex items-center">
-                  <UIcon name="i-lucide-calendar-check" class="text-green-600 dark:text-green-400 mr-3" />
+                  <UIcon name="lucide:calendar-check" class="text-green-600 dark:text-green-400 mr-3" />
                   <span class="font-semibold text-gray-900 dark:text-white">Saturday</span>
                 </div>
                 <span class="text-gray-600 dark:text-gray-300">{{ contactInfo.businessHours.saturday }}</span>
@@ -521,7 +521,7 @@ const generateEmailLink = (template: string) => {
 
               <div class="flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-lg">
                 <div class="flex items-center">
-                  <UIcon name="i-lucide-shield-alert" class="text-red-600 dark:text-red-400 mr-3" />
+                  <UIcon name="lucide:shield-alert" class="text-red-600 dark:text-red-400 mr-3" />
                   <span class="font-semibold text-gray-900 dark:text-white">Sunday</span>
                 </div>
                 <span class="text-gray-600 dark:text-gray-300">{{ contactInfo.businessHours.sunday }}</span>
@@ -588,7 +588,7 @@ const generateEmailLink = (template: string) => {
                 variant="outline"
                 color="primary"
               >
-                <UIcon name="i-lucide-navigation" class="mr-1" />
+                <UIcon name="lucide:navigation" class="mr-1" />
                 Directions
               </UButton>
               <UButton
@@ -597,7 +597,7 @@ const generateEmailLink = (template: string) => {
                 variant="outline"
                 color="green"
               >
-                <UIcon name="i-lucide-phone" class="mr-1" />
+                <UIcon name="lucide:phone" class="mr-1" />
                 Call Now
               </UButton>
             </div>
@@ -620,13 +620,13 @@ const generateEmailLink = (template: string) => {
             <UButton size="xl" color="white" variant="solid" :to="`tel:${contactInfo.phone}`">
               Call Emergency Line
               <template #trailing>
-                <UIcon name="i-lucide-phone" />
+                <UIcon name="lucide:phone" />
               </template>
             </UButton>
             <UButton size="xl" color="white" variant="outline" to="/quote">
               Get Quote
               <template #trailing>
-                <UIcon name="i-lucide-arrow-right" />
+                <UIcon name="lucide:arrow-right" />
               </template>
             </UButton>
           </div>

@@ -118,13 +118,13 @@ const maintenanceProgram = [
     type: 'Daily Checks',
     description: 'Pre-trip inspections and daily safety checks',
     frequency: 'Every Trip',
-    icon: 'i-lucide-calendar-check'
+    icon: 'lucide:calendar-check'
   },
   {
     type: 'Weekly Service',
     description: 'Comprehensive weekly maintenance and inspections',
     frequency: 'Weekly',
-    icon: 'i-lucide-calendar-days'
+    icon: 'lucide:calendar-days'
   },
   {
     type: 'Monthly Overhaul',

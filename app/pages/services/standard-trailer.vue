@@ -23,7 +23,7 @@ const features = [
     description: 'Professional container pickup from major Australian ports with real-time tracking and scheduling.'
   },
   {
-    icon: 'i-lucide-map-pin',
+    icon: 'lucide:map-pin',
     title: 'Direct Customer Delivery',
     description: 'Direct delivery to your location with specialized standard trailer equipment and professional drivers.'
   },

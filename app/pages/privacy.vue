@@ -179,7 +179,7 @@ const privacySections = [
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="flex items-start">
-                <UIcon name="i-lucide-mail" class="text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" />
+                <UIcon name="lucide:mail" class="text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <p class="font-semibold text-gray-900 dark:text-white">Email</p>
                   <a href="mailto:admin@bsbtransport.com.au" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors">
@@ -201,7 +201,7 @@ const privacySections = [
               </div>
               
               <div class="flex items-start md:col-span-2">
-                <UIcon name="i-lucide-map-pin" class="text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" />
+                <UIcon name="lucide:map-pin" class="text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <p class="font-semibold text-gray-900 dark:text-white">Registered Office</p>
                   <p class="text-gray-600 dark:text-gray-300">
@@ -217,7 +217,7 @@ const privacySections = [
             <!-- Response Time Notice -->
             <div class="mt-6 p-4 bg-white dark:bg-gray-800 rounded-lg border-l-4 border-blue-500">
               <div class="flex items-start">
-                <UIcon name="i-lucide-info" class="text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" />
+                <UIcon name="lucide:info" class="text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <p class="font-semibold text-gray-900 dark:text-white mb-2">Response Time</p>
                   <p class="text-gray-600 dark:text-gray-300 text-sm">

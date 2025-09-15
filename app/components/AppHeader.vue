@@ -4,22 +4,22 @@ const navigationItems = [
   {
     label: 'Home',
     to: '/',
-    icon: 'i-lucide-home'
+    icon: 'lucide:home'
   },
   {
     label: 'Fleet',
     to: '/fleet',
-    icon: 'i-lucide-truck'
+    icon: 'lucide:truck'
   },
   {
     label: 'Coverage',
     to: '/coverage',
-    icon: 'i-lucide-map'
+    icon: 'lucide:map'
   },
   {
     label: 'Services',
     to: '/services',
-    icon: 'i-lucide-truck',
+    icon: 'lucide:truck',
     children: [
       { label: 'Standard Trailer Transport', to: '/services/standard-trailer' },
       { label: 'Drop Trailer Transport', to: '/services/drop-trailer' },
@@ -32,17 +32,17 @@ const navigationItems = [
   {
     label: 'Careers',
     to: '/careers',
-    icon: 'i-lucide-users'
+    icon: 'lucide:users'
   },
   {
     label: 'Contact',
     to: '/contact',
-    icon: 'i-lucide-phone'
+    icon: 'lucide:phone'
   },
   {
     label: 'About',
     to: '/about',
-    icon: 'i-lucide-building-2'
+    icon: 'lucide:building-2'
   }
 ]
 

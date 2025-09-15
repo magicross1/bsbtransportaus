@@ -191,7 +191,7 @@ const services = [
       'Custom quote generation'
     ],
     image: '/images/services/index/quote.png',
-    icon: 'i-lucide-calculator',
+    icon: 'lucide:calculator',
     link: '/services/quote-calculator',
     color: 'indigo'
   }

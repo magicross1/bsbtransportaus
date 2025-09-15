@@ -52,6 +52,17 @@ export default defineNuxtConfig({
     },
     experimental: {
       wasm: true
+    },
+    // 确保图标在静态构建时正确工作
+    storage: {
+      icons: {
+        driver: 'fs',
+        base: './.nuxt/dist/icons'
+      }
+    },
+    // 禁用图标 API 路由
+    routeRules: {
+      '/api/_nuxt_icon/**': { prerender: false }
     }
   },
 
@@ -118,7 +129,6 @@ export default defineNuxtConfig({
     serverBundle: 'local',
     collections: ['lucide', 'simple-icons'],
     // 关键：静态构建时强制内联所有图标
-    static: true,
     mode: 'inline'
   },
 
