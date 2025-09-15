@@ -14,7 +14,12 @@ useHead({
   ],
   htmlAttrs: {
     lang: 'en-AU'
-  }
+  },
+  script: [
+    {
+      src: 'https://cdn.botpress.cloud/webchat/v3.2/inject.js'
+    }
+  ]
 })
 
 useSeoMeta({
@@ -34,6 +39,9 @@ useSeoMeta({
       </UMain>
 
       <AppFooter />
+      
+      <!-- Botpress聊天机器人 -->
+      <ChatBot />
     </UApp>
   </SEOProvider>
 </template>

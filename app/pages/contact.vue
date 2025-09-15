@@ -53,11 +53,11 @@ const contactChannels = [
   },
   {
     title: 'Live Chat',
-    description: 'Chat with our support team online',
-    contact: 'Start Chat(update soon)',
+    description: 'Chat with BSB Transport AU Assistant',
+    contact: 'Click the message icon in the bottom right',
     icon: 'lucide:message-circle',
     color: 'purple',
-    available: 'Mon-Fri 8AM-6PM'
+    available: '24/7'
   },
   {
     title: 'Office Visit',

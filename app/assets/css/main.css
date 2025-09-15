@@ -44,3 +44,16 @@ svg[data-icon],
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+/* 官方Botpress样式配置 - 简化版本 */
+#webchat .bpWebchat {
+  position: unset !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  max-width: 100% !important;
+}
+
+#webchat .bpFab {
+  display: none !important;
+}
